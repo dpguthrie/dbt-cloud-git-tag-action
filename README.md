@@ -7,7 +7,7 @@ This is a Github Action that is designed to work with a git tag release strategy
 | **Name**                  | **Description**                                                                                                 | Required | Default            |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------|----------|--------------------|
 | `dbt_cloud_service_token` | The service token generated from dbt Cloud.  **Ensure you have the proper permissions to trigger jobs**         | `True`   |                    |
-| `dbt_cloud_account_id`    | This is the account ID which contains the projects you'll be triggering CI jobs for.                            | `True`   |                    |
+| `dbt_cloud_account_id`    | This is the account ID which contains the environment you want to update with the latest git tag.                            | `True`   |                    |
 | `dbt_cloud_project_id`        | This is the project ID corresponding to the environment linked to the project you configure this action in.              | `True`   |                    |
 | `dbt_cloud_environment_id`        | This is the environment ID corresponding to the environment you want to update with the latest git tag.              | `True`   |                    |
 | `dbt_cloud_host`          | Where your dbt Cloud is located.                                                                                | `False`  | `cloud.getdbt.com` |
