@@ -40,15 +40,15 @@ if __name__ == "__main__":
     # Retrieve the environment to update
     environment = make_request(path)["data"]
 
+    # Update the environment with the custom branch
     environment["custom_branch"] = tag
+    environment["use_custom_branch"] = True
 
     # Update the environment
     response = make_request(path, method="POST", json=environment)
 
-    # Log the response
-    logger.info(response)
-
     if response["status"]["code"] == 200:
         sys.exit(0)
 
+    logger.error(response["status"])
     sys.exit(1)
