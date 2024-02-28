@@ -1,0 +1,26 @@
+name: "dbt Cloud Git Tag Environment"
+description: "This action will update the provided environment's custom branch with the latest git tag"
+branding:
+  icon: "cloud"
+  color: "orange"
+author: "Doug Guthrie"
+inputs:
+  dbt_cloud_service_token:
+    description: dbt Cloud Service Token
+    required: true
+  dbt_cloud_account_id:
+    description: dbt Cloud account ID
+    required: true
+  dbt_cloud_project_id:
+    description: dbt Cloud project ID
+    required: true
+  dbt_cloud_environment_id:
+    description: dbt Cloud CI Job ID for the current project
+    required: true
+  dbt_cloud_host:
+    description: dbt Cloud host
+    required: false
+    default: "cloud.getdbt.com"
+runs:
+  using: "docker"
+  image: "Dockerfile"
