@@ -5,8 +5,6 @@ FROM python:3.9.18-slim
 ADD . /app
 WORKDIR /app
 
-RUN pip install uv
-
 # Install any dependencies
 ENV VIRTUAL_ENV=/usr/local
 RUN pip install uv && uv pip install --no-cache requests
