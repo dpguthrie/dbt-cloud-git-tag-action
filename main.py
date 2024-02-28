@@ -35,7 +35,7 @@ def make_request(path: str, *, method="GET", **kwargs) -> Dict:
 if __name__ == "__main__":
     # Get the latest tag
     tag = GITHUB_REF.split("/")[-1]
-    path = "api/v3/accounts/{ACCOUNT_ID}/projects/{PROJECT_ID}/environments/{ENV_ID}/"
+    path = f"api/v3/accounts/{ACCOUNT_ID}/projects/{PROJECT_ID}/environments/{ENV_ID}/"
 
     # Retrieve the environment to update
     environment = make_request(path)["data"]
