@@ -48,7 +48,7 @@ if __name__ == "__main__":
     # Log the response
     logger.info(response)
 
-    if response["status"] == 200:
+    if response["status"]["code"] == 200:
         sys.exit(0)
 
     sys.exit(1)
