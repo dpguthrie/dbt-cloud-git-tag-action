@@ -30,7 +30,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: dbt Cloud Downstream CI Action
-      uses: dpguthrie/dbt-cloud-git-tag-action@0.3.0
+      uses: dpguthrie/dbt-cloud-git-tag-action@0.3.2
       with:
         dbt_cloud_account_id: ${{ secrets.DBT_CLOUD_ACCOUNT_ID }}
         dbt_cloud_project_id: ${{ secrets.DBT_CLOUD_PROJECT_ID }}
