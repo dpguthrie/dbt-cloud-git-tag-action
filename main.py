@@ -44,8 +44,9 @@ if __name__ == "__main__":
     environment["custom_branch"] = tag
     environment["use_custom_branch"] = True
 
-    # Remove credentials
+    # Remove credentials and project
     environment["credentials"] = None
+    environment["project"] = None
 
     # Update the environment
     response = make_request(path, method="POST", json=environment)
